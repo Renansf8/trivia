@@ -17,9 +17,9 @@ const Home = () => {
       <Typography variant="body1" align="center" gutterBottom>
         Escolha o número de perguntas à responder:
       </Typography>
-      <Grid container justifyContent="center" alignItems="flex-end">
+      <Grid container justifyContent="center">
         <Grid xs={1}>
-          <Link to="/questions" style={{ textDecoration: 'none' }}>
+          <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={1}
               onClick={e => setQuestionsNumber(e.target.value)}
@@ -30,7 +30,7 @@ const Home = () => {
           </Link>
         </Grid>
         <Grid xs={1}>
-          <Link to="/questions" style={{ textDecoration: 'none' }}>
+          <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={2}
               onClick={e => setQuestionsNumber(e.target.value)}
@@ -41,7 +41,7 @@ const Home = () => {
           </Link>
         </Grid>
         <Grid xs={1}>
-          <Link to="/questions" style={{ textDecoration: 'none' }}>
+          <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={3}
               onClick={e => setQuestionsNumber(e.target.value)}
@@ -52,7 +52,7 @@ const Home = () => {
           </Link>
         </Grid>
         <Grid xs={1}>
-          <Link to="/questions" style={{ textDecoration: 'none' }}>
+          <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={4}
               onClick={e => setQuestionsNumber(e.target.value)}
@@ -63,7 +63,7 @@ const Home = () => {
           </Link>
         </Grid>
         <Grid xs={1}>
-          <Link to="/questions" style={{ textDecoration: 'none' }}>
+          <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={5}
               onClick={e => setQuestionsNumber(e.target.value)}
