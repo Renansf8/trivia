@@ -9,8 +9,14 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 
 const useStyles = makeStyles({
+  root: {
+    backgroundColor: '#e6e6e6',
+    padding: 32,
+    boxShadow: '5px 4px 5px',
+    borderRadius: 8,
+  },
   header: {
-    marginTop: 32,
+    marginTop: 8,
     marginBottom: 40,
   },
   title: {
@@ -31,7 +37,7 @@ const useStyles = makeStyles({
   },
   containerButtons: {
     marginTop: 32,
-    marginLeft: 24,
+    marginLeft: 16,
   },
 });
 
@@ -40,7 +46,7 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <Container className={classes.root}>
       <Container className={classes.header}>
         <Typography
           className={classes.title}
@@ -123,7 +129,7 @@ const Home = () => {
           </Link>
         </Grid>
       </Grid>
-    </div>
+    </Container>
   );
 };
 

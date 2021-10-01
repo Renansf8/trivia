@@ -1,8 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/styles';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: '#e6e6e6',
+    padding: '32px 0',
+    boxShadow: '5px 4px 5px',
+    borderRadius: 8,
+    maxWidth: 600,
+    margin: '200px auto',
+  },
+  paragrah: {
+    display: 'flex',
+    justifyContent: 'center',
+    fontFamily: 'Courgette',
+    fontSize: 20,
+  },
+  containerButtons: {
+    marginTop: 32,
+  },
+});
 
 const Start = () => {
   const createScore = () => {
@@ -20,19 +43,26 @@ const Start = () => {
     );
   };
 
+  const classes = useStyles();
+
   return (
-    <Grid container justifyContent="center">
-      <Link to="/questions" style={{ textDecoration: 'none' }}>
-        <Button onClick={() => createScore()} variant="contained">
-          Start
-        </Button>
-      </Link>
-      <Link to="/" style={{ textDecoration: 'none' }}>
-        <Button color="error" variant="contained">
-          Cancel
-        </Button>
-      </Link>
-    </Grid>
+    <Box className={classes.root}>
+      <Typography className={classes.paragrah} variant="p">
+        Are you ready?
+      </Typography>
+      <Grid className={classes.containerButtons} container justifyContent="space-around">
+        <Link to="/questions" style={{ textDecoration: 'none' }}>
+          <Button size="large" onClick={() => createScore()} variant="contained">
+            Start
+          </Button>
+        </Link>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <Button size="large" color="error" variant="contained">
+            Cancel
+          </Button>
+        </Link>
+      </Grid>
+    </Box>
   );
 };
 
