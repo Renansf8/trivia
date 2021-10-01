@@ -1,21 +1,39 @@
 import React, { useContext } from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TriviaContext from '../../context/TriviaContext';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
-  paragraph: {
-    fontSize: 40,
-    backgroundColor: 'violet',
+  title: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: 16,
+    fontFamily: 'Courgette',
+  },
+  hits: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  span: {
+    fontWeight: 600,
+    fontSize: 20,
+    marginLeft: 8,
   },
   container: {
     display: 'flex',
+    justifyContent: 'center',
   },
   box: {
     margin: 20,
+    maxWidth: 400,
+    padding: 16,
   },
+  background: {},
 });
 
 const Feedback = () => {
@@ -35,35 +53,53 @@ const Feedback = () => {
   const { marked } = JSON.parse(localStorage.getItem('markedQ'));
 
   return (
-    <div>
-      <Typography className={classes.paragraph} variant="h4">
-        Página de Feedback
+    <Container className={classes.background}>
+      <Typography className={classes.title} variant="h4">
+        Feedback
       </Typography>
-      <Typography variant="body1">Número de acertos: {hits}</Typography>
-      <Typography variant="body1">Número de erros: {miss}</Typography>
+      <Box className={classes.hits}>
+        <Typography variant="body1">
+          Número de acertos:
+          <Typography className={classes.span} component="span">
+            {hits}
+          </Typography>
+        </Typography>
+        <Typography variant="body1">
+          Número de erros:
+          <Typography className={classes.span} component="span">
+            {miss}
+          </Typography>
+        </Typography>
+      </Box>
       <Container className={classes.container}>
-        <Box className={classes.box}>
+        <Paper className={classes.box}>
           <Typography>Respostas corretas:</Typography>
           {answer.map((a, i) => {
             return (
               <Typography key={i}>
-                Questão{i + 1} - {a}
+                Questão{i + 1} -{' '}
+                <Typography className={classes.span} component="span">
+                  {a}
+                </Typography>
               </Typography>
             );
           })}
-        </Box>
-        <Box className={classes.box}>
+        </Paper>
+        <Paper className={classes.box}>
           <Typography>Respostas marcadas:</Typography>
           {marked.map((m, i) => {
             return (
               <Typography key={i}>
-                Questão{i + 1} - {m}
+                Questão{i + 1} -{' '}
+                <Typography className={classes.span} component="span">
+                  {m}
+                </Typography>
               </Typography>
             );
           })}
-        </Box>
+        </Paper>
       </Container>
-    </div>
+    </Container>
   );
 };
 
