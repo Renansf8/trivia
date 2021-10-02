@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: '#e6e6e6',
+    backgroundColor: '#fffffe',
     padding: '32px 0',
     boxShadow: '5px 4px 5px',
     borderRadius: 8,

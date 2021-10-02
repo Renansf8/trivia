@@ -10,10 +10,11 @@ import Grid from '@mui/material/Grid';
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: '#e6e6e6',
+    backgroundColor: '#fffffe',
     padding: 32,
     boxShadow: '5px 4px 5px',
     borderRadius: 8,
+    marginTop: 40,
   },
   header: {
     marginTop: 8,
@@ -31,9 +32,6 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     fontFamily: 'Courgette',
     fontSize: 20,
-  },
-  button: {
-    backgroundColor: '#6246ea',
   },
   containerButtons: {
     marginTop: 32,
@@ -55,7 +53,7 @@ const Home = () => {
           align="center"
           gutterBottom
         >
-          Bem vindo(a) à Trivia
+          Welcome to Trivia
         </Typography>
         <Typography
           className={classes.paragraph}
@@ -64,7 +62,7 @@ const Home = () => {
           gutterBottom
           component="p"
         >
-          Escolha o número de perguntas à responder:
+          Choose the number of questions:
         </Typography>
       </Container>
       <Grid className={classes.containerButtons} container justifyContent="center">
