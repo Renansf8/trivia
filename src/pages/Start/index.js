@@ -10,17 +10,17 @@ import Typography from '@mui/material/Typography';
 const useStyles = makeStyles({
   root: {
     backgroundColor: '#fffffe',
-    padding: '32px 0',
-    boxShadow: '5px 4px 5px',
     borderRadius: 8,
-    maxWidth: 600,
+    boxShadow: '5px 5px 5px #848484',
     margin: '200px auto',
+    maxWidth: 600,
+    padding: '32px 0',
   },
   paragrah: {
     display: 'flex',
-    justifyContent: 'center',
     fontFamily: 'Courgette',
     fontSize: 20,
+    justifyContent: 'center',
   },
   containerButtons: {
     marginTop: 32,

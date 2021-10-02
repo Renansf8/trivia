@@ -1,39 +1,56 @@
 import React, { useContext } from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import TriviaContext from '../../context/TriviaContext';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
+  root: {
+    marginTop: 32,
+  },
   title: {
+    color: '#fffffe',
     display: 'flex',
+    fontFamily: 'Courgette',
+    fontSize: 40,
     justifyContent: 'center',
     marginBottom: 16,
-    fontFamily: 'Courgette',
   },
   hits: {
+    alignItems: 'center',
+    color: '#fffffe',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    marginBottom: 16,
+    fontFamily: 'Courgette',
+    fontSize: 18,
   },
   span: {
-    fontWeight: 600,
+    color: '#1976d2',
     fontSize: 20,
-    marginLeft: 8,
+    fontFamily: 'Courgette',
+    fontWeight: 600,
+    paddingLeft: 8,
   },
   container: {
     display: 'flex',
     justifyContent: 'center',
   },
   box: {
+    backgroundColor: '#fffffe',
+    borderRadius: 8,
+    boxShadow: '5px 5px 5px #848484',
+    fontFamily: 'Courgette',
     margin: 20,
-    maxWidth: 400,
+    minWidth: 360,
     padding: 16,
+    display: 'flex',
+    flexDirection: 'column',
   },
-  background: {},
+  answers: {
+    fontSize: 20,
+  },
 });
 
 const Feedback = () => {
@@ -53,52 +70,56 @@ const Feedback = () => {
   const { marked } = JSON.parse(localStorage.getItem('markedQ'));
 
   return (
-    <Container className={classes.background}>
-      <Typography className={classes.title} variant="h4">
+    <Container className={classes.root}>
+      <Typography className={classes.title} variant="p">
         Feedback
       </Typography>
       <Box className={classes.hits}>
-        <Typography variant="body1">
+        <Typography variant="p">
           Número de acertos:
-          <Typography className={classes.span} component="span">
+          <Typography className={classes.span} variant="span">
             {hits}
           </Typography>
         </Typography>
-        <Typography variant="body1">
+        <Typography variant="p">
           Número de erros:
-          <Typography className={classes.span} component="span">
+          <Typography className={classes.span} variant="span">
             {miss}
           </Typography>
         </Typography>
       </Box>
-      <Container className={classes.container}>
-        <Paper className={classes.box}>
-          <Typography>Respostas corretas:</Typography>
+      <Grid className={classes.container}>
+        <Box elevation={4} className={classes.box}>
+          <Typography className={classes.answers} variant="p">
+            Respostas corretas:
+          </Typography>
           {answer.map((a, i) => {
             return (
-              <Typography key={i}>
-                Questão{i + 1} -{' '}
-                <Typography className={classes.span} component="span">
+              <Typography variant="p" key={i}>
+                Questão {i + 1} -{' '}
+                <Typography className={classes.span} variant="span">
                   {a}
                 </Typography>
               </Typography>
             );
           })}
-        </Paper>
-        <Paper className={classes.box}>
-          <Typography>Respostas marcadas:</Typography>
+        </Box>
+        <Box className={classes.box}>
+          <Typography className={classes.answers} variant="p">
+            Respostas marcadas:
+          </Typography>
           {marked.map((m, i) => {
             return (
-              <Typography key={i}>
-                Questão{i + 1} -{' '}
-                <Typography className={classes.span} component="span">
+              <Typography variant="p" key={i}>
+                Questão {i + 1} -{' '}
+                <Typography className={classes.span} variant="span">
                   {m}
                 </Typography>
               </Typography>
             );
           })}
-        </Paper>
-      </Container>
+        </Box>
+      </Grid>
     </Container>
   );
 };

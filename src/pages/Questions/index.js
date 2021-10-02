@@ -15,19 +15,19 @@ const Questions = () => {
   const useStyles = makeStyles({
     root: {
       backgroundColor: '#fffffe',
-      padding: '32px 0',
-      boxShadow: '5px 4px 5px',
       borderRadius: 8,
-      maxWidth: 600,
+      boxShadow: '5px 5px 5px #848484',
       margin: '40px auto',
+      maxWidth: 600,
+      padding: '32px 0',
     },
     question: {
-      fontFamily: 'Courgette',
-      display: 'flex',
-      justifyContent: 'center',
-      fontSize: 40,
-      paddingTop: 24,
       color: '#fffffe',
+      display: 'flex',
+      fontFamily: 'Courgette',
+      fontSize: 40,
+      justifyContent: 'center',
+      paddingTop: 24,
     },
     paragrah: {
       display: 'flex',
@@ -36,16 +36,16 @@ const Questions = () => {
       fontSize: 20,
     },
     span: {
+      color: '#1976d2',
       fontFamily: 'Courgette',
       fontSize: 20,
       fontWeight: 600,
-      color: '#1976d2',
       paddingRight: 6,
     },
     containerButtons: {
+      margin: '0 auto',
       marginTop: 32,
       maxWidth: 400,
-      margin: '0 auto',
     },
   });
 

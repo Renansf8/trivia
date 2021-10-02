@@ -11,14 +11,14 @@ import Grid from '@mui/material/Grid';
 const useStyles = makeStyles({
   root: {
     backgroundColor: '#fffffe',
-    padding: 32,
-    boxShadow: '5px 4px 5px',
     borderRadius: 8,
+    boxShadow: '5px 5px 5px #848484',
     marginTop: 40,
+    padding: 32,
   },
   header: {
-    marginTop: 8,
     marginBottom: 40,
+    marginTop: 8,
   },
   title: {
     display: 'flex',
@@ -29,13 +29,13 @@ const useStyles = makeStyles({
   },
   paragraph: {
     display: 'flex',
-    justifyContent: 'center',
     fontFamily: 'Courgette',
     fontSize: 20,
+    justifyContent: 'center',
   },
   containerButtons: {
-    marginTop: 32,
     marginLeft: 16,
+    marginTop: 32,
   },
 });
 
