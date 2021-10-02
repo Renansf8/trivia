@@ -66,7 +66,7 @@ const Home = () => {
         </Typography>
       </Container>
       <Grid className={classes.containerButtons} container justifyContent="center">
-        <Grid xs={1}>
+        <Grid item xs={1}>
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={1}
@@ -78,7 +78,7 @@ const Home = () => {
             </Button>
           </Link>
         </Grid>
-        <Grid xs={1}>
+        <Grid item xs={1}>
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={2}
@@ -90,7 +90,7 @@ const Home = () => {
             </Button>
           </Link>
         </Grid>
-        <Grid xs={1}>
+        <Grid item xs={1}>
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={3}
@@ -102,7 +102,7 @@ const Home = () => {
             </Button>
           </Link>
         </Grid>
-        <Grid xs={1}>
+        <Grid item xs={1}>
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={4}
@@ -114,7 +114,7 @@ const Home = () => {
             </Button>
           </Link>
         </Grid>
-        <Grid xs={1}>
+        <Grid item xs={1}>
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={5}
