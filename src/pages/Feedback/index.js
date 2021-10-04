@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import TriviaContext from '../../context/TriviaContext';
 import { makeStyles } from '@material-ui/styles';
 
