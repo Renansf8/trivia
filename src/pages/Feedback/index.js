@@ -84,13 +84,13 @@ const Feedback = () => {
       </Typography>
       <Box className={classes.hits}>
         <Typography variant="p">
-          Número de acertos:
+          Number of hits:
           <Typography className={classes.span} variant="span">
             {hits}
           </Typography>
         </Typography>
         <Typography variant="p">
-          Número de erros:
+          Number of errors:
           <Typography className={classes.span} variant="span">
             {miss}
           </Typography>
@@ -99,12 +99,12 @@ const Feedback = () => {
       <Grid className={classes.container}>
         <Box elevation={4} className={classes.box}>
           <Typography className={classes.answers} variant="p">
-            Respostas corretas:
+            Correct answers:
           </Typography>
           {answer.map((a, i) => {
             return (
               <Typography variant="p" key={i}>
-                Questão {i + 1} -{' '}
+                Question {i + 1} -{' '}
                 <Typography className={classes.span} variant="span">
                   {a}
                 </Typography>
@@ -114,12 +114,12 @@ const Feedback = () => {
         </Box>
         <Box className={classes.box}>
           <Typography className={classes.answers} variant="p">
-            Respostas marcadas:
+            Marked answers:
           </Typography>
           {marked.map((m, i) => {
             return (
               <Typography variant="p" key={i}>
-                Questão {i + 1} -{' '}
+                Question {i + 1} -{' '}
                 <Typography className={classes.span} variant="span">
                   {m}
                 </Typography>
