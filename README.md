@@ -2,6 +2,8 @@
   Trivia  💡
 </h1>
 
+<h2><a href="https://trivia-gold.vercel.app/">Visite o site do projeto</a></h2>
+
 ## 📗 Sobre
 **O Trivia** é um app para responder perguntas de conhecimentos gerais, o usuário escolhe a quantidade de perguntas desejada (de 1 até 5), após responder todas, recebe um relatório com a quantidade de acertos e erros, e também quais respostas foram marcadas e quais eram as certas.
 <br>
@@ -14,7 +16,7 @@ Foi utilizada uma [API](https://opentdb.com/api.php?amount=QUANTIDADE.) para bus
  - [Context API](https://pt-br.reactjs.org/docs/context.html)
  - [Axios](https://github.com/axios/axios)
  - [Material UI](https://mui.com/pt/)
- - [vercel](https://vercel.com/renansf8) -  deploy
+ - [Vercel](https://vercel.com/renansf8) -  deploy
 
  ##  Como iniciar o projeto
  ```bash
