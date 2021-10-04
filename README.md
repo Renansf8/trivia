@@ -14,6 +14,7 @@ Foi utilizada uma [API](https://opentdb.com/api.php?amount=QUANTIDADE.) para bus
  - [Context API](https://pt-br.reactjs.org/docs/context.html)
  - [Axios](https://github.com/axios/axios)
  - [Material UI](https://mui.com/pt/)
+ - [vercel](https://vercel.com/renansf8) -  deploy
 
  ##  Como iniciar o projeto
  ```bash
