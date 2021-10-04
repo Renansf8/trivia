@@ -40,7 +40,7 @@ const useStyles = makeStyles({
 });
 
 const Home = () => {
-  const { setQuestionsNumber } = useContext(TriviaContext);
+  const { takeNumQuestions } = useContext(TriviaContext);
   const classes = useStyles();
 
   return (
@@ -67,10 +67,10 @@ const Home = () => {
       </Container>
       <Grid className={classes.containerButtons} container justifyContent="center">
         <Grid item xs={1}>
-          <Link to="/start" style={{ textDecoration: 'none' }}>
+          <Link data-testid="test" to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={1}
-              onClick={e => setQuestionsNumber(e.target.value)}
+              onClick={takeNumQuestions}
               variant="contained"
               className={classes.button}
             >
@@ -82,7 +82,7 @@ const Home = () => {
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={2}
-              onClick={e => setQuestionsNumber(e.target.value)}
+              onClick={takeNumQuestions}
               variant="contained"
               className={classes.button}
             >
@@ -94,7 +94,7 @@ const Home = () => {
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={3}
-              onClick={e => setQuestionsNumber(e.target.value)}
+              onClick={takeNumQuestions}
               variant="contained"
               className={classes.button}
             >
@@ -106,7 +106,7 @@ const Home = () => {
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={4}
-              onClick={e => setQuestionsNumber(e.target.value)}
+              onClick={takeNumQuestions}
               variant="contained"
               className={classes.button}
             >
@@ -118,7 +118,7 @@ const Home = () => {
           <Link to="/start" style={{ textDecoration: 'none' }}>
             <Button
               value={5}
-              onClick={e => setQuestionsNumber(e.target.value)}
+              onClick={takeNumQuestions}
               variant="contained"
               className={classes.button}
             >

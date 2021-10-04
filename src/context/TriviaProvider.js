@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { fetchAPi } from '../services';
 
 const TriviaProvider = ({ children }) => {
-  const [questionsNumber, setQuestionsNumber] = useState(4);
+  const [questionsNumber, setQuestionsNumber] = useState(0);
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
@@ -13,10 +13,15 @@ const TriviaProvider = ({ children }) => {
     });
   }, [questionsNumber]);
 
+  const takeNumQuestions = e => {
+    setQuestionsNumber(e.target.value);
+  };
+
   const contextValue = {
     questionsNumber,
     setQuestionsNumber,
     questions,
+    takeNumQuestions,
   };
 
   return <TriviaContext.Provider value={contextValue}>{children}</TriviaContext.Provider>;
